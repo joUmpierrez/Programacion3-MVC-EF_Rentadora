@@ -15,6 +15,7 @@ namespace Console_App
             RentalContext db = new RentalContext();
 
             Employee employee = new Employee();
+
             employee.name = "Joaquin";
             employee.lastname = "Umpierrez";
             employee.telephoneNum = "095084602";
@@ -22,7 +23,17 @@ namespace Console_App
             employee.password = "heimdall23911";
 
             db.employees.Add(employee);
+
+            Client client = new Client();
+            client.name = "Facundo";
+            client.lastname = "Blanco";
+            client.telephoneNum = "422668676";
+            client.idCard = 45451;
+
+            db.clients.Add(client);
             db.SaveChanges();
+
+            
         }
     }
 }

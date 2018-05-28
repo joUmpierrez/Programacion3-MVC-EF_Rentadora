@@ -23,6 +23,13 @@ namespace DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Person>().ToTable("People");
+            modelBuilder.Entity<Client>().ToTable("Clients");
+            modelBuilder.Entity<Employee>().ToTable("Employees");
+            modelBuilder.Entity<Service>().ToTable("Services");
+            modelBuilder.Entity<Car>().ToTable("Cars");
+            modelBuilder.Entity<House>().ToTable("Houses");
+            modelBuilder.Entity<Boat>().ToTable("Boats");
 
             modelBuilder.Entity<Rent>()
                 .HasRequired(r => r.employee)
