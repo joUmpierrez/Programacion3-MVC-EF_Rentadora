@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{65f44f8c-cdf1-4578-9179-d67090c0224e}</Project>
+      <Project>{9c90bf81-ee58-4093-a037-a69c49d7a49b}</Project>
       <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
