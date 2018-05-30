@@ -24,12 +24,20 @@ namespace DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Person>().ToTable("People");
+<<<<<<< HEAD
             modelBuilder.Entity<Employee>().ToTable("Employees");
             modelBuilder.Entity<Client>().ToTable("Clients");
 
             modelBuilder.Entity<Service>().ToTable("Services");
             modelBuilder.Entity<House>().ToTable("Houses");
             modelBuilder.Entity<Car>().ToTable("Cars");
+=======
+            modelBuilder.Entity<Client>().ToTable("Clients");
+            modelBuilder.Entity<Employee>().ToTable("Employees");
+            modelBuilder.Entity<Service>().ToTable("Services");
+            modelBuilder.Entity<Car>().ToTable("Cars");
+            modelBuilder.Entity<House>().ToTable("Houses");
+>>>>>>> 29ebff220d9df3822d08a9e9352ab9bea8dd6ae4
             modelBuilder.Entity<Boat>().ToTable("Boats");
 
             modelBuilder.Entity<Rent>()
