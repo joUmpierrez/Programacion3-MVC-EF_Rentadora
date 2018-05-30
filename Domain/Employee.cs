@@ -12,6 +12,7 @@ namespace Domain
     public class Employee : Person
     {
         [Required(ErrorMessage = "El numero de empleado es un dato requerido.")]
+        [Index(IsUnique = true)]
         public virtual int employeeNum { get; set; }
 
         [Required(ErrorMessage = "La clave es un dato requerido.")]

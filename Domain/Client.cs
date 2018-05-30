@@ -12,6 +12,7 @@ namespace Domain
     public class Client : Person
     {
         [Required(ErrorMessage = "La cedula es un dato requerido.")]
+        [Index(IsUnique = true)]
         public virtual int idCard { get; set; }
     }
 }

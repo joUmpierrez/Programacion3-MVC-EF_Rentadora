@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain;
-using DAL;
+using BLL;
 
 namespace Console_App
 {
@@ -12,17 +12,23 @@ namespace Console_App
     {
         static void Main(string[] args)
         {
-            RentalContext db = new RentalContext();
+            BoatController boatController = BoatController.Instance;
 
-            Employee employee = new Employee();
-            employee.name = "Joaquin";
-            employee.lastname = "Umpierrez";
-            employee.telephoneNum = "095084602";
-            employee.employeeNum = 44575548;
-            employee.password = "heimdall23911";
+            Boat boat = new Boat();
+            boat.brand = "Pepesito";
+            boat.model = "Pepe Boat";
+            boat.competitorCode = "45464645";
+            boat.type = "Lancha";
+            boat.numPassengers = 41;
+            boat.costPerDay = 55;
+            //boatController.Create(boat);
+            //boatController.Delete(boat);
 
-            db.employees.Add(employee);
-            db.SaveChanges();
+            Boat boatFind = boatController.Select(3);
+
+            
+
+            Console.ReadKey();
         }
     }
 }

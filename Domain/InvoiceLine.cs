@@ -26,5 +26,13 @@ namespace Domain
 
         [Required(ErrorMessage = "El empleado es un dato requerido.")]
         public virtual Rent rent { get; set; }
+
+        [Required]
+        public virtual bool used { get; set; }
+
+        public InvoiceLine()
+        {
+            used = false;
+        }
     }
 }

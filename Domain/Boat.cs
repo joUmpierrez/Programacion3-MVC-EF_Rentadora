@@ -24,6 +24,8 @@ namespace Domain
         public virtual string model { get; set; }
 
         [Required(ErrorMessage = "El numero de barco es un dato requerido.")]
+        [MaxLength(20, ErrorMessage = "El numero de barco no puede tener mas de 20 caracteres.")]
+        [Index(IsUnique = true)]
         public virtual string competitorCode { get; set; }
     }
 }

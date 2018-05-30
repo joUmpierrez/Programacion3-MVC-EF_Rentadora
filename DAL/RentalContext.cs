@@ -23,6 +23,14 @@ namespace DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Person>().ToTable("People");
+            modelBuilder.Entity<Employee>().ToTable("Employees");
+            modelBuilder.Entity<Client>().ToTable("Clients");
+
+            modelBuilder.Entity<Service>().ToTable("Services");
+            modelBuilder.Entity<House>().ToTable("Houses");
+            modelBuilder.Entity<Car>().ToTable("Cars");
+            modelBuilder.Entity<Boat>().ToTable("Boats");
 
             modelBuilder.Entity<Rent>()
                 .HasRequired(r => r.employee)
@@ -34,7 +42,7 @@ namespace DAL
                 .WithMany()
                 .WillCascadeOnDelete(false);
 
-            base.OnModelCreating(modelBuilder);
+              base.OnModelCreating(modelBuilder);
         }
     }
 }

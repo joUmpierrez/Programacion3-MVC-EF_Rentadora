@@ -26,5 +26,10 @@ namespace Domain
 
         [Required(ErrorMessage = "La linea de factura es un dato requerido.")]
         public virtual List<InvoiceLine> InvoiceLines { get; set; }
+
+        public Invoice()
+        {
+            date = DateTime.Today.Date;
+        }
     }
 }

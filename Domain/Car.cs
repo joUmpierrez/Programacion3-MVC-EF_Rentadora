@@ -27,12 +27,16 @@ namespace Domain
         public virtual string color { get; set; }
 
         [Required(ErrorMessage = "El numero de chasis es un dato requerido.")]
+        [Index(IsUnique = true)]
         public virtual int chasisNum { get; set; }
 
         [Required(ErrorMessage = "El numero de motor es un dato requerido.")]
+        [Index(IsUnique = true)]
         public virtual int motorNum { get; set; }
 
         [Required(ErrorMessage = "El numero de matricula es un dato requerido.")]
+        [MaxLength(20, ErrorMessage = "El numero de matricula no puede tener mas de 20 caracteres.")]
+        [Index(IsUnique = true)]
         public virtual string registerNum { get; set; }
     }
 }
