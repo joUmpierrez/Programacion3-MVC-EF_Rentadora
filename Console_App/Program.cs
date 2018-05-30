@@ -12,7 +12,24 @@ namespace Console_App
     {
         static void Main(string[] args)
         {
-            
+            BoatController boatController = BoatController.Instance;
+
+            Boat boat = new Boat();
+            boat.brand = "sss";
+            boat.competitorCode = "554f";
+            boat.costPerDay = 55;
+            boat.model = "aaa";
+            boat.numPassengers = 44;
+            boat.type = "sss";
+
+            boatController.Create(boat);
+
+            foreach (var item in boatController.Read())
+            {
+                Console.WriteLine(item.brand);
+            }
+
+            Console.ReadKey();
         }
     }
 }
