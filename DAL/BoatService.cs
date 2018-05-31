@@ -41,8 +41,13 @@ namespace DAL
             using (RentalContext db = new RentalContext())
             {
                 Boat findBoat = db.boats.Find(boat.id);
+                findBoat.costPerDay = boat.costPerDay;
+                findBoat.description = boat.description;
+                findBoat.numPassengers = boat.numPassengers;
+                findBoat.type = boat.type;
                 findBoat.brand = boat.brand;
-                findBoat = boat;
+                findBoat.model = boat.model;
+                findBoat.competitorCode = boat.competitorCode;
                 db.SaveChanges();
             }
         }
@@ -53,7 +58,7 @@ namespace DAL
             using (RentalContext db = new RentalContext())
             {
                 Boat findBoat = db.boats.Find(id);
-                
+                findBoat.active = false;
                 db.SaveChanges();
             }
         }
@@ -67,7 +72,10 @@ namespace DAL
 
                 foreach (Boat item in db.boats)
                 {
-                    boats.Add(item);
+                    if (item.active == true)
+                    {
+                        boats.Add(item);
+                    }
                 }
                 return boats;
             }

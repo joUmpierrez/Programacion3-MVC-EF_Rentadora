@@ -17,5 +17,16 @@ namespace Domain
 
         [Required(ErrorMessage = "El costo por dia es un dato requerido.")]
         public virtual double costPerDay { get; set; }
+
+        [Required(ErrorMessage = "La descripcion es un dato requerido.")]
+        public virtual string description { get; set; }
+
+        [Required]
+        public virtual bool active { get; set; }
+
+        public Service()
+        {
+            active = true;
+        }
     }
 }

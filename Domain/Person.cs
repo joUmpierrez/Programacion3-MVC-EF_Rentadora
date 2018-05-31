@@ -23,5 +23,13 @@ namespace Domain
 
         [Required(ErrorMessage = "El telefono es un dato requerido.")]
         public virtual string telephoneNum { get; set; }
+
+        [Required]
+        public virtual bool active { get; set; }
+
+        public Person()
+        {
+            active = true;
+        }
     }
 }

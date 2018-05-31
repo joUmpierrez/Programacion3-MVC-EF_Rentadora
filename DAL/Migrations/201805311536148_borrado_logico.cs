@@ -3,7 +3,7 @@ namespace DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class borrado_logico : DbMigration
     {
         public override void Up()
         {
@@ -13,6 +13,7 @@ namespace DAL.Migrations
                     {
                         id = c.Int(nullable: false, identity: true),
                         costPerDay = c.Double(nullable: false),
+                        active = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.id);
             
@@ -24,6 +25,7 @@ namespace DAL.Migrations
                         name = c.String(nullable: false),
                         lastname = c.String(nullable: false),
                         telephoneNum = c.String(nullable: false),
+                        active = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.id);
             
@@ -36,6 +38,7 @@ namespace DAL.Migrations
                         quantity = c.Int(nullable: false),
                         cost = c.Double(nullable: false),
                         used = c.Boolean(nullable: false),
+                        active = c.Boolean(nullable: false),
                         rent_id = c.Int(nullable: false),
                         Invoice_id = c.Int(),
                     })
@@ -52,6 +55,7 @@ namespace DAL.Migrations
                         id = c.Int(nullable: false, identity: true),
                         startDate = c.DateTime(nullable: false),
                         endDate = c.DateTime(nullable: false),
+                        active = c.Boolean(nullable: false),
                         client_id = c.Int(nullable: false),
                         employee_id = c.Int(nullable: false),
                         service_id = c.Int(nullable: false),
@@ -72,6 +76,7 @@ namespace DAL.Migrations
                         date = c.DateTime(nullable: false),
                         rut = c.Int(nullable: false),
                         name = c.String(nullable: false),
+                        active = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.id);
             

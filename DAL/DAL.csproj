@@ -54,9 +54,13 @@
     <Compile Include="HouseService.cs" />
     <Compile Include="InvoiceLineService.cs" />
     <Compile Include="InvoiceService.cs" />
-    <Compile Include="Migrations\201805302227363_initial.cs" />
-    <Compile Include="Migrations\201805302227363_initial.Designer.cs">
-      <DependentUpon>201805302227363_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201805311536148_borrado_logico.cs" />
+    <Compile Include="Migrations\201805311536148_borrado_logico.Designer.cs">
+      <DependentUpon>201805311536148_borrado_logico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805311543469_description_to_Services.cs" />
+    <Compile Include="Migrations\201805311543469_description_to_Services.Designer.cs">
+      <DependentUpon>201805311543469_description_to_Services.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,8 +78,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201805302227363_initial.resx">
-      <DependentUpon>201805302227363_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201805311536148_borrado_logico.resx">
+      <DependentUpon>201805311536148_borrado_logico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805311543469_description_to_Services.resx">
+      <DependentUpon>201805311543469_description_to_Services.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

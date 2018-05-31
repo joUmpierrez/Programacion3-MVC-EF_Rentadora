@@ -29,7 +29,7 @@ namespace DAL
         {
             using (RentalContext db = new RentalContext())
             {
-
+                db.clients.Add(client);
             }
         }
 

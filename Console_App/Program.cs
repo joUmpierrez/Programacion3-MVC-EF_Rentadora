@@ -24,16 +24,9 @@ namespace Console_App
 
             //boatController.Create(boat);
 
-            foreach (var item in boatController.Read())
+            foreach (Boat item in boatController.Read())
             {
-                Console.WriteLine($"{item.id} ---> {item.brand}");
-            }
-
-            boatController.Delete(1);
-
-            foreach (var item in boatController.Read())
-            {
-                Console.WriteLine($"{item.id} ---> {item.brand}");
+                Console.WriteLine($"{item.id} ---> {item.brand} ---> {item.active}");
             }
 
 

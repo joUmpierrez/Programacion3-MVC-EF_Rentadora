@@ -29,5 +29,13 @@ namespace Domain
 
         [Required(ErrorMessage = "El cliente es un dato requerido.")]
         public virtual Client client { get; set; }
+
+        [Required]
+        public virtual bool active { get; set; }
+
+        public Rent()
+        {
+            active = true;
+        }
     }
 }

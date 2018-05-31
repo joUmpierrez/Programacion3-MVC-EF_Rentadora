@@ -30,9 +30,13 @@ namespace Domain
         [Required]
         public virtual bool used { get; set; }
 
+        [Required]
+        public virtual bool active { get; set; }
+
         public InvoiceLine()
         {
             used = false;
+            active = true;
         }
     }
 }
