@@ -24,36 +24,49 @@ namespace DAL
         }
         #endregion
 
-        RentalContext db = new RentalContext();
-
         // Create InvoiceLine
         public void Create(InvoiceLine invoiceLine)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Update InvoiceLine
         public void Update(InvoiceLine invoiceLine)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Delete InvoiceLine
         public void Delete(InvoiceLine invoiceLine)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Read InvoiceLine
         public List<InvoiceLine> Read()
         {
-            return null;
+            using (RentalContext db = new RentalContext())
+            {
+                return null;
+            }
         }
 
         // Select InvoiceLine
         public InvoiceLine Select(int id)
         {
-            return db.invoiceLines.Find(id);
+            using (RentalContext db = new RentalContext())
+            {
+                return db.invoiceLines.Find(id);
+            }
         }
     }
 }

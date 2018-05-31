@@ -54,6 +54,11 @@
     <Compile Include="HouseService.cs" />
     <Compile Include="InvoiceLineService.cs" />
     <Compile Include="InvoiceService.cs" />
+    <Compile Include="Migrations\201805302227363_initial.cs" />
+    <Compile Include="Migrations\201805302227363_initial.Designer.cs">
+      <DependentUpon>201805302227363_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentalContext.cs" />
     <Compile Include="RentService.cs" />
@@ -67,6 +72,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805302227363_initial.resx">
+      <DependentUpon>201805302227363_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

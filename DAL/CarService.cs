@@ -24,36 +24,49 @@ namespace DAL
         }
         #endregion
 
-        RentalContext db = new RentalContext();
-
         // Create Car
         public void Create(Car car)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Update Car
         public void Update(Car car)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Delete Car
         public void Delete(Car car)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Read Car
         public List<Car> Read()
         {
-            return null;
+            using (RentalContext db = new RentalContext())
+            {
+                return null;
+            }
         }
 
         // Select Car
         public Car Select(int id)
         {
-            return db.cars.Find(id);
+            using (RentalContext db = new RentalContext())
+            {
+                return db.cars.Find(id);
+            }
         }
     }
 }

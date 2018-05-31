@@ -40,9 +40,9 @@ namespace BLL
         }
 
         // Delete Boat
-        public void Delete (Boat boat)
+        public void Delete (int id)
         {
-            boatService.Delete(boat);
+            boatService.Delete(id);
         }
 
         // Read Boat

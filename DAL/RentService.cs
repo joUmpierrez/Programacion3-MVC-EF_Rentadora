@@ -29,31 +29,46 @@ namespace DAL
         // Create Rent
         public void Create(Rent rent)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Update Rent
         public void Update(Rent rent)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Delete Rent
         public void Delete(Rent rent)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Read Rent
         public List<Rent> Read()
         {
-            return null;
+            using (RentalContext db = new RentalContext())
+            {
+                return null;
+            }
         }
 
         // Select Rent
         public Rent Select(int id)
         {
-            return db.rents.Find(id);
+            using (RentalContext db = new RentalContext())
+            {
+                return db.rents.Find(id);
+            }
         }
     }
 }

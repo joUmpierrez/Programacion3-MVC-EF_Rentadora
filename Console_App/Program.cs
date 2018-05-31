@@ -22,12 +22,20 @@ namespace Console_App
             boat.numPassengers = 44;
             boat.type = "sss";
 
-            boatController.Create(boat);
+            //boatController.Create(boat);
 
             foreach (var item in boatController.Read())
             {
-                Console.WriteLine(item.brand);
+                Console.WriteLine($"{item.id} ---> {item.brand}");
             }
+
+            boatController.Delete(1);
+
+            foreach (var item in boatController.Read())
+            {
+                Console.WriteLine($"{item.id} ---> {item.brand}");
+            }
+
 
             Console.ReadKey();
         }

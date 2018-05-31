@@ -29,11 +29,6 @@ namespace DAL
             modelBuilder.Entity<Service>().ToTable("Services");
             modelBuilder.Entity<House>().ToTable("Houses");
             modelBuilder.Entity<Car>().ToTable("Cars");
-            modelBuilder.Entity<Client>().ToTable("Clients");
-            modelBuilder.Entity<Employee>().ToTable("Employees");
-            modelBuilder.Entity<Service>().ToTable("Services");
-            modelBuilder.Entity<Car>().ToTable("Cars");
-            modelBuilder.Entity<House>().ToTable("Houses");
             modelBuilder.Entity<Boat>().ToTable("Boats");
 
             modelBuilder.Entity<Rent>()

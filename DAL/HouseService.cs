@@ -24,36 +24,49 @@ namespace DAL
         }
         #endregion
 
-        RentalContext db = new RentalContext();
-
         // Create House
         public void Create(House house)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Update House
         public void Update(House house)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Delete House
         public void Delete(House house)
         {
+            using (RentalContext db = new RentalContext())
+            {
 
+            }
         }
 
         // Read House
         public List<House> Read()
         {
-            return null;
+            using (RentalContext db = new RentalContext())
+            {
+                return null;
+            }
         }
 
         // Select House
         public House Select(int id)
         {
-            return db.houses.Find(id);
+            using (RentalContext db = new RentalContext())
+            {
+                return db.houses.Find(id);
+            }
         }
     }
 }

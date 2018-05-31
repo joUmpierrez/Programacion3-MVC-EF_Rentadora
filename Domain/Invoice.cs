@@ -29,7 +29,7 @@ namespace Domain
 
         public Invoice()
         {
-            date = DateTime.Today.Date;
+            date = DateTime.Now.Date;
         }
     }
 }

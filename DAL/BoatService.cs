@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain;
+using System.Data.Entity;
 
 namespace DAL
 {
@@ -24,47 +25,61 @@ namespace DAL
         }
         #endregion
 
-        RentalContext db = new RentalContext();
-
         // Create Boat
         public void Create(Boat boat)
         {
-            db.boats.Add(boat);
-            db.SaveChanges();
+            using (RentalContext db = new RentalContext())
+            {
+                db.boats.Add(boat);
+                db.SaveChanges();
+            }
         }
 
         // Update Boat
         public void Update(Boat boat)
         {
-            Boat findBoat = db.boats.Find(boat.id);
-            findBoat = boat;
-            db.SaveChanges();
+            using (RentalContext db = new RentalContext())
+            {
+                Boat findBoat = db.boats.Find(boat.id);
+                findBoat.brand = boat.brand;
+                findBoat = boat;
+                db.SaveChanges();
+            }
         }
 
         // Delete Boat
-        public void Delete(Boat boat)
+        public void Delete(int id)
         {
-            Boat findBoat = db.boats.Find(boat.id);
-            db.boats.Remove(findBoat);
-            db.SaveChanges();
+            using (RentalContext db = new RentalContext())
+            {
+                Boat findBoat = db.boats.Find(id);
+                
+                db.SaveChanges();
+            }
         }
 
         // Read Boat
         public List<Boat> Read()
         {
-            List<Boat> boats = new List<Boat>();
-
-            foreach (Boat item in db.boats)
+            using (RentalContext db = new RentalContext())
             {
-                boats.Add(item);
+                List<Boat> boats = new List<Boat>();
+
+                foreach (Boat item in db.boats)
+                {
+                    boats.Add(item);
+                }
+                return boats;
             }
-            return boats;
         }
 
         // Select Boat
         public Boat Select (int id)
         {
-            return db.boats.Find(id);
+            using (RentalContext db = new RentalContext())
+            {
+                return db.boats.Find(id);
+            }
         }
     }
 }
