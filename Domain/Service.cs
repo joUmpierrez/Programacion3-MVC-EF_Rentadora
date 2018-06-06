@@ -16,9 +16,11 @@ namespace Domain
         public virtual int id { get; set; }
 
         [Required(ErrorMessage = "El costo por dia es un dato requerido.")]
+        [Display(Name = "Costo por dia de servicio")]
         public virtual double costPerDay { get; set; }
 
         [Required(ErrorMessage = "La descripcion es un dato requerido.")]
+        [Display(Name = "Descripcion del servicio")]
         public virtual string description { get; set; }
 
         [Required]
